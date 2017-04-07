@@ -52,9 +52,6 @@ public class hackWechatRun {
 
     public static void main(String[] args) throws Exception
     {
-        System.setProperty("http.proxySet", "true");
-        System.setProperty("http.proxyHost", "127.0.0.1");
-        System.setProperty("http.proxyPort", "8888");
         hackWechatRun object = new hackWechatRun();
         object.upload();
     }
