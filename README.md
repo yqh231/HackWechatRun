@@ -11,7 +11,11 @@
 3. Have Fun～
 
 # PHP
-填入相应数据
+网页版填入相应数据提交即可
+
+多用户版本添加到定时任务（crontab）可实现每日自动刷步数
+
+    php -f multi-users.php >> log.txt
 
 # Java
 需要[okhttp](https://github.com/square/okhttp)
@@ -20,7 +24,8 @@
 - [x] Python实现
 - [x] PHP实现
 - [x] Java实现
-- [x] 输入功能
-- [x] PHP版本的CSS页面美化
+- [x] 添加输入功能
+- [x] CSS页面美化（PHP）
+- [x] 多用户支持（PHP）
 - [ ] Java GUI
 
