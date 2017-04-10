@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 __author__ = "Evilmass"
-__version__ = "1.0"
+__version__ = "1.1"
 __email__ = "evilmass1ve@gmail.com"
 
 import requests
@@ -11,6 +11,12 @@ import json
 import time
 from hashlib import md5
 
+
+users = {
+    # 'uid1': 'pc_value1',
+    # 'uid2': 'pc_value2',
+    # 多用户以此类推
+}
 data ={}
 
 
@@ -29,29 +35,21 @@ def generateKey():  # 生成校验值
     return key
 
 
-def upload():
+def upload(uid, pc):  # POST
     url = 'http://walk.ledongli.cn/rest/dailystats/upload/v3?uid=' + str(uid)
     data['calories'] = data['duration'] = data['distance'] = data['steps'] = steps
     data['date'] = formatDate()
     data['key'] = generateKey()
     playload = {
-        'pc': 'your_pc_value',
-        'stats': json.dumps([data]),
+        'pc': pc,
+        'stats': json.dumps([data])
     }
-    headers = {
-        'User-Agent':'okhttp/3.5.0',
-        'Content-Type':'application/x-www-form-urlencoded',
-        'Accept-Encoding': 'gzip, deflate',
-        'Host':'walk.ledongli.cn',
-    }
-    response = requests.request("POST", url, data=playload, headers=headers)
-    return response.text
+    rsp = requests.request("POST", url=url, data=playload)
+    return rsp.text
 
 
 if __name__ == '__main__':
     steps = int(input(u'请输入步数：'))  # 上限为98800
-    uid = int(input(u'请输入uid：'))
-    if "{\"ret\":[],\"errorCode\":0}" in upload():
-        print(u'总计刷了%s步' % str(steps))
-    else:
-        print(u'uid不正确或网络错误')
+    for uid, pc in users.items():
+        print(upload(uid, pc)) #返回 {"ret":[],"errorCode":0} 代表成功
+    
