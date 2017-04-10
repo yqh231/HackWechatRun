@@ -4,11 +4,9 @@
 
     pip install requests
 
-1. Fiddler抓包，安卓可用Packet Capture(免root)，将pc_value替换成自己的
-
-2. 输入步数和uid
-
-3. Have Fun～
+1. 电脑用Fiddler抓包，安卓可用Packet Capture(免root)
+2. 在`hackWechatRun.py`里修改uid和pc_value
+3. 输入想刷的步数，Have Fun～
 
 # PHP
 网页版填入相应数据提交即可
