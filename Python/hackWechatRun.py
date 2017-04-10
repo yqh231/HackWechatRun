@@ -45,11 +45,11 @@ def upload(uid, pc):  # POST
         'stats': json.dumps([data])
     }
     rsp = requests.request("POST", url=url, data=playload)
-    return rsp.text
+    return rsp.text #返回 {"ret":[],"errorCode":0} 代表成功
 
 
 if __name__ == '__main__':
     steps = int(input(u'请输入步数：'))  # 上限为98800
     for uid, pc in users.items():
-        print(upload(uid, pc)) #返回 {"ret":[],"errorCode":0} 代表成功
+        print(upload(uid, pc))
     

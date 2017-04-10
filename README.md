@@ -2,11 +2,19 @@
 
 # Python
 
-    pip install requests
+1. 乐动力APP需绑定**微信和手机**
 
-1. 电脑用Fiddler抓包，安卓可用Packet Capture(免root)
-2. 在`hackWechatRun.py`里修改uid和pc_value
-3. 输入想刷的步数，Have Fun～
+        python mobile_login.py 
+    随机生成一个PC后，输入手机号和得到的验证码其生效
+        
+2. 在`hackWechatRun.py`的users里填入uid和第一步获得的PC
+
+3. 输入步数
+    
+        python hackWechatRun.py
+
+**多用户**：重复第一步得到PC后填入相应数据到`hackWechatRun.py`即可
+
 
 # PHP
 网页版填入相应数据提交即可
@@ -25,5 +33,7 @@
 - [x] 添加输入功能
 - [x] CSS页面美化（PHP）
 - [x] 多用户支持（PHP）
+- [x] 解决PC VALUE
+- [ ] 找到在线接收短信验证码的API或平台（不绑定手机刷步数）
 - [ ] Java GUI
 
