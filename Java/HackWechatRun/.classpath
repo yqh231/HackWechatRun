@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/httpcomponents-client-4.5.3/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="lib/httpcomponents-client-4.5.3/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/httpcomponents-client-4.5.3/fluent-hc-4.5.3.jar"/>
+	<classpathentry kind="lib" path="lib/httpcomponents-client-4.5.3/httpclient-4.5.3.jar" sourcepath="E:/迅雷下载/Compressed/httpcomponents-client-4.5.3-src/httpcomponents-client-4.5.3"/>
+	<classpathentry kind="lib" path="lib/httpcomponents-client-4.5.3/httpclient-cache-4.5.3.jar"/>
+	<classpathentry kind="lib" path="lib/httpcomponents-client-4.5.3/httpclient-win-4.5.3.jar"/>
+	<classpathentry kind="lib" path="lib/httpcomponents-client-4.5.3/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="lib/httpcomponents-client-4.5.3/httpmime-4.5.3.jar"/>
+	<classpathentry kind="lib" path="lib/httpcomponents-client-4.5.3/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/httpcomponents-client-4.5.3/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/gson2.8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
