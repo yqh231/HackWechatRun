@@ -1,16 +1,17 @@
 <?php
+
 $steps = 0;
-$uid1 = 0;
-$pc1 = "pc1";
-$uid2 = 0;
-$pc2 = "pc2";
-//多用户依次类推
+$users = array(
+    'uid1' => 'pc1',
+    'uid2' => 'pc2',
+    # 多用户以此类推
+    );
 
 class HackWechatRun{
     function genertateUrl($uid){
         return "http://walk.ledongli.cn/rest/dailystats/upload/v3?uid=".$uid;
     }
-    function genertatePOST($pc, $steps){
+    function genertatePostData($pc, $steps){
         $calories = $distance = $duration = 1;
         $date = mktime(0, 0, 0, date("n"), date("j"), date("Y"));
         $key = md5("ldl_pro@".$date."#".$steps."$".$calories."^".$distance."&".$duration);
@@ -27,5 +28,6 @@ class HackWechatRun{
 }
 
 $API = new HackWechatRun;
-$API->upload($API->genertateUrl($uid1), $API->genertatePOST($pc1, $steps));
-$API->upload($API->genertateUrl($uid2), $API->genertatePOST($pc2, $steps));
+foreach ($users as $key => $value) {
+    $API->upload($API->genertateUrl($key), $API->genertatePostData($value, $steps));
+}
