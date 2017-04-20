@@ -2,19 +2,20 @@
 
 # Python
 
-1. 乐动力APP需绑定**微信和手机**
+* 乐动力APP需要**绑定微信设备**
+* **pc格式**：an+22位任意数字或字母
+* **绑定手机**：`mobile_login.py `注释掉最后一行`mobileLogin()`并调用`mobileBind()`即可
+* **登录验证**：输入手机号和验证码使伪造的pc生效
 
-        python mobile_login.py 
-    随机生成一个PC后，输入手机号和得到的验证码其生效
-        
-2. 在`hackWechatRun.py`的users里填入uid和第一步获得的PC
+* **多用户**：重复下面第一步填入相应数据到`hackWechatRun.py`即可
+1. 在`mobile_login.py `的users里填入uid和你喜欢的pc :)
 
-3. 输入步数
-    
-        python hackWechatRun.py
+            python mobile_login.py
 
-**多用户**：重复第一步得到PC后填入相应数据到`hackWechatRun.py`即可
 
+2. 在`hackWechatRun.py`的users里填入uid和第一步的pc，输入步数即可
+ 
+            python hackWechatRun.py
 
 # PHP
 网页版填入相应数据提交即可
