@@ -1,7 +1,7 @@
 'use strict';
 
 function submit() {
-    const date = 1492876800;
+    const date = new Date().setHours(0, 0, 0, 0) / 1000;
     const steps = document.getElementsByName('steps')[0].value;
     const uid = document.getElementsByName('uid')[0].value;
     const pc_value = document.getElementsByName('pc_value')[0].value;
@@ -18,17 +18,16 @@ function submit() {
     };
     const postData = `pc=${pc_value}&stats=[${JSON.stringify(information)}]`;
     axios.post(url, postData)
-        .then((r) => {
+        .then(() => {
             swal({
                 text: 'Submit successfully!',
                 type: 'success'
             });
-            console.info(r);
         })
         .catch(error => {
             swal({
                 text: 'Ooops! There is something wrong.',
                 type: 'error'
-            })
+            });
         });
 }
